@@ -1,0 +1,19 @@
+{% extends 'base.html.twig.html.twig' %}
+
+{% block title %}
+    Hello Liste !
+{% endblock %}
+
+{% block body %}
+   <table>
+       <th>
+           <td>Nom</td>
+       </th>
+       {% for name in liste %}
+       <tr>
+           <td>{{ name }}</td>
+           <td><a href=""{{ path('hello',{prenom: name}) }}">hello</a></td>
+       </tr>
+       {% endfor %}
+   </table>
+{% endblock %}
